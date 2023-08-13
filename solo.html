@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zipdev's about me</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            overflow: hidden; 
+        }
+
+        header {
+            background-color: #333333;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #eeeeee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #333333;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+            color: #ffffff; 
+        }
+
+        .profile-container {
+            background-color: #000000d7; 
+            border-radius: 10px; 
+            padding: 10px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: fit-content; 
+            margin: auto; 
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .profile-container-small {
+            background-color: #000000d7; 
+            border-radius: 10px; 
+            padding: 10px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: fit-content; 
+            margin: auto; 
+            position: absolute;
+            top: 84%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .profile-picture {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 20px 0; 
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0; 
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.192);
+            color: #ffffff;
+        }
+
+        #image-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        .button-image {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.round-image {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    overflow: hidden;
+}
+
+.project-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+
+        .project-button {
+            margin: 0 10px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <img id="image-background" src="images/peakpx.jpg" alt="Background Image">
+    <main>
+        <div class="profile-container">
+            <img src="images/pfp.jpg" alt="Profile Picture" class="profile-picture">
+            <h2>zipdev</h2>
+            <p>Hello. I am a 15-year-old who is into automation coding.</p>
+            <p>My main language is Golang although I have<br>
+            experience in multiple languages such as Python, Discord.js, and even other stuff like Playwright.</p>
+            <div class="social-links">
+                <a id="discord-link1" href="#" data-clipboard-text="zipdev."><img src="images/discord.png" alt="Discord"></a>
+                <a href="https://t.me/sknhet" target="_blank"> <img src="https://cdn.solo.to/images/contact/telegram-min.svg" alt="Telegram"></a>
+            </div>
+            <div class="profile-container-small" style="margin-top: 240px;">
+                <p><big><b>PROJECTS</b></big></p>
+                <div class="project-buttons">
+                    <div class="project-button">
+                        <p><b>Ms Control BETA</b></p>
+                        <a href="https://discord.gg/mscontrol" target="_blank">
+                            <img src="images/9k.png" alt="Button Image" class="button-image round-image">
+                        </a>
+                    </div>
+                    <div class="project-button">
+                        <p><b>Automatic PurchaseBot</b></p>
+                        <a href="https://discord.gg/VUHC2HXNK" target="_blank">
+                            <img src="images/purchaseb.png" alt="New Button Image" class="button-image round-image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <script>
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+
+        const discordLink1 = document.getElementById('discord-link1');
+        discordLink1.addEventListener('click', function(event) {
+            event.preventDefault();
+            const username = this.getAttribute('data-clipboard-text');
+            copyToClipboard(username);
+        });
+    </script>
+</body>
+</html>
