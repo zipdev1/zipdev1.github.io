@@ -14,13 +14,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #000000b7;
-    overflow: hidden; 
+    overflow: show; 
     scrollbar-width: none; 
 }
 
-body::-webkit-scrollbar {
-    width: 0;
-}
 
         header {
             background-color: #333333;
@@ -165,6 +162,25 @@ body::-webkit-scrollbar {
             transform: translateX(-50%);
         }
 
+        body {
+            overflow: overlay; 
+            scrollbar-width: thin;
+            scrollbar-color: #555555 transparent; 
+        }
+
+        
+        body::-webkit-scrollbar {
+            width: 12px; 
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #555555; 
+            border-radius: 15px; 
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: transparent; 
+        }
         
     </style>
 </head>
