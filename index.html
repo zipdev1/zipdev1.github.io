@@ -151,11 +151,18 @@
         a {
         text-decoration: none !important;
     }
+    
+    .spotify-preview {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
         
     </style>
 </head>
 <body>
-    <img id="image-background" src="images/peakpx.jpg" alt="Background Image">
+    <img id="image-background" src="images/zipdev.png" alt="Background Image">
     <main>
         <div class="profile-container">
             <img src="images/pfp.jpg" alt="Profile Picture" class="profile-picture">
@@ -208,3 +215,8 @@
 </body>
 </html>
 
+
+<div class="spotify-preview">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3U3iWIc83FdadWl5HDp7Oh?utm_source=generator&theme=0" width="500" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+</main>
